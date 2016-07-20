@@ -61,6 +61,8 @@ body {
   background-color: #f0efef;
 }
 
+/* We typically recommend using classes instead of IDs for CSS. You will be using IDs for JavaScript, but in order to be able to reuse the styles you're creating you want the flexibility of classes (you can only use one ID per page)*/
+
 header {
   background-color: #033048;
   width: 100%;
@@ -76,9 +78,7 @@ header {
   color: white;
   margin: 0 0 0 50px;
   padding-top: 1%;
-
 }
-
 
 .site-nav {
   float: right;
@@ -93,24 +93,21 @@ header {
   font-size: 24px;
   font-weight: 600;
   margin: 0 50px 20px 0;
+  /* You can't add margin or padding to an element that you've set as display: inline; if you want it to be inline while also being able to add padding and margin, you need to use display: inline-block */
 }
 .site-nav a{
   text-decoration: none;
   color: #f9e42e;
 }
 
-
 .site-nav a:hover{
   color: white;
-
 }
-
 
 .blog{
   width: 700px;
   float: left;
   margin: 40px 0 10px 50px;
-
 }
 
 h2{
@@ -126,7 +123,6 @@ p{
   font-weight: 300;
   color: #606161;
   line-height: 1.25;
-
 }
 
 .blog-content{
@@ -134,7 +130,6 @@ p{
 }
 
 p.blog-content:first-letter {
-
   float: left;
   color: #606161;
   font-family: 'Open Sans', sans-serif;
@@ -142,8 +137,9 @@ p.blog-content:first-letter {
   font-size: 75px;
   line-height: 1;
   margin-right: 5px;
-
 }
+
+/* AWESOME job using the first-letter pseudo selector! Good job with specificity */
 
 .readmore{
   float: right;
@@ -156,12 +152,10 @@ p.blog-content:first-letter {
 .readmore a{
   color: #033048;
   text-decoration: none;
-
 }
 
 .readmore a:hover{
   background-color: #f9e42e;
-
 }
 
 hr {
@@ -174,7 +168,6 @@ hr {
   width: 240px;
   float: left;
   margin: 40px 50px 20px 20px;
-
 }
 
 .sidebar-nav a{
@@ -182,35 +175,27 @@ hr {
   text-decoration: none;
   font-weight: lighter;
   font-size: 24px;
-
 }
 
 .sidebar-nav a:hover{
   background-color: #f9e42e;
-
 }
 
 h3 {
   font-size: 32px;
   font-weight: 800;
   color: #033048
-
 }
 
 .sidebar-nav{
   margin: 0 0 10px 0;
-
-
 }
 
-
 .about{
-
   font-size: 22px;
   font-weight: 300;
   color: #033048;
   margin-bottom: 10px;
-
 }
 
 .learn-more{
@@ -223,21 +208,19 @@ h3 {
 .learn-more a{
   color: #033048;
   text-decoration: none;
-
 }
-
 
 .learn-more a:hover{
   background-color: #f9e42e;
 }
 
+/* It looks like you're repeating the same style as the other a:hover styles that you've defined above. Why not reuse the styles and remove the repeated code? It's always better to reuse and avoid clutter! */
 
 .signup{
   background-color: #f9e42e;
   padding: 3%;
   clear:both;
 }
-
 
 .signup p{
   text-align: center;
@@ -248,11 +231,10 @@ h3 {
   border-radius: 5px;
   background-color: #033048;
   width: 150px;
-  position: center;
+  position: center; /* Do you mean text-align center? Position is used for absolute or fixed positioning */
   padding: 1%;
   margin: 0 auto;
   display: block;
-
 }
 
 .signup a{
@@ -269,7 +251,6 @@ footer {
     text-align: center;
     margin: 0 auto;
     padding: 1%;
-
 }
 
 .footer-logo {
@@ -281,10 +262,8 @@ footer {
   padding-top: 20px;
 }
 
-
 footer img{
   margin: 1% 1% 2% 1%;
-
 }
 
 
@@ -301,5 +280,4 @@ footer h4{
 /*******************************************/
 
 
-
-
+/* I just did some cleanup of the spacing on the page. Also, if you aren't using the titles like this Additional Styles section, be sure to remove it. Having clean and readable code becomes more important as your files get larger and more complex. */
