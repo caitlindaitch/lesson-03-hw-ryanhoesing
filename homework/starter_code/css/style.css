@@ -5,6 +5,16 @@ Author: Ryan Hoesing
 Developer @GA in NYC
 */
 
+/*
+
+Awesome job! The page looks great, it's a spot-on replica of the comp you were given.
+
+I just did some cleanup of the spacing on the page; make sure that you are consistently putting one space between each class and there are no errant spaces inside the brackets. Also, if you aren't using the titles like the Additional Styles section at the bottom, be sure to remove it. Having clean and readable code becomes more important as your files get larger and more complex.
+
+- Make sure you fully understand the use case of a clearfix. You only need it when you need an element to clear it's children elements so they are displayed below and are not overlapping. You are using it in a lot of places that don't need it.
+- Reuse CSS classes whenever possible. If you have a similar hover state for all of your links, create one class to share between them so you don't have duplicated code
+
+*/
 
 /******************************************
 /* SETUP
@@ -12,17 +22,17 @@ Developer @GA in NYC
 
 /* Box Model Hack */
 * {
-     box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
@@ -44,10 +54,10 @@ Developer @GA in NYC
 /*******************************************/
 
 body {
-     color: #000;
-     font-size: 12px;
-     line-height: 1.4;
-     font-family: 'Open Sans', sans-serif;
+  color: #000;
+  font-size: 12px;
+  line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /******************************************
@@ -278,6 +288,3 @@ footer h4{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-
-
-/* I just did some cleanup of the spacing on the page. Also, if you aren't using the titles like this Additional Styles section, be sure to remove it. Having clean and readable code becomes more important as your files get larger and more complex. */
